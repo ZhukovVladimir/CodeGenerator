@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/code_generator
+    username: postgres
+    password: 123456
+    hikari:
+      schema: code_generator
+  flyway:
+    enabled: true
+    schemas: code_generator
+    baseline-description: baseline
+    baseline-version: 0.1.0
+    baseline-on-migrate: true
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
